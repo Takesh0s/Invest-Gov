@@ -4,18 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Detalhes do Investimento</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    main {
-      padding: 2rem;
-    }
-    .imagem-detalhe {
-      width: 100%;
-      max-width: 800px;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
-  </style>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
   <header>
@@ -25,7 +14,7 @@
     <img id="imagem-investimento" class="imagem-detalhe" src="" alt="Imagem do Investimento">
     <h2 id="titulo-investimento"></h2>
     <p id="descricao-investimento"></p>
-    <a href="index.html" style="color: #0cf; text-decoration: underline">&larr; Voltar</a>
+    <a href="{{ url_for('home_blueprint.index') }}" style="color: #0cf; text-decoration: underline">&larr; Voltar</a>
   </main>
 
   <script>

@@ -2,8 +2,11 @@ from flask import Blueprint, request, jsonify
 from app.models.user import User
 from app import db, bcrypt
 from flask_login import login_user, logout_user, login_required, current_user
+from flask import Blueprint
 
 bp = Blueprint('auth', __name__, url_prefix='/auth')
+
+bp = Blueprint('home', __name__)
 
 @bp.route('/register', methods=['POST'])
 def register():

@@ -4,25 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cadastrar Produto</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
   <h2>Cadastrar Novo Investimento</h2>
   <form id="cadastro-form">
     <label>Nome da Empresa:</label>
     <input type="text" id="empresa" required />
-  
+
     <label>Produto:</label>
     <input type="text" id="produto" required />
-  
+
     <label>Imagem (URL direta da imagem):</label>
     <input type="text" id="imagem" required />
-  
+
     <label>Descrição do Produto:</label>
     <textarea id="descricao" rows="4" required></textarea>
-  
+
     <button type="submit">Cadastrar</button>
   </form>  
-  <script src="cadastro.js"></script>
+  <script src="{{ url_for('static', filename='cadastro.js') }}"></script>
 </body>
 </html>
